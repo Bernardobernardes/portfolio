@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.644);
+}
+
+body {
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('./IMG/1378575.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #00000080;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #177b7e;
+}
+
+/* Seção Sobre Mim */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#sobre img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+#sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #f0f0f0;
+    background-color: #000000bb;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+.center {
+    text-align: center;
+}
+#links h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.doc-button {
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px #0000004d;
+}
+
+.doc-button:hover {
+    background-color: #000000bb;
+    transform: scale(1.05);
+}
+.section {
+    padding: 40px 20px;
+}
