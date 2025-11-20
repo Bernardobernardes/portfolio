@@ -3,132 +3,189 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
-/* Imagem de fundo */
+/* Fundo */
 .background-image {
-  background-image: url('../IMG/Fundo3.jpg');
+  background-image: url('../IMG/Caminho Selvagem entre as Montanhas.png');
   background-size: cover;
   background-position: center;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  filter: brightness(0.55);
   z-index: -1;
 }
 
-/* Cabeçalho */
+/* Header */
 header {
-  background-color: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(6px);
+  background: rgba(20, 20, 20, 0.55);
   color: white;
-  padding: 20px;
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0%;
+  z-index: 1000; /* garante que nada passe por cima */
+  background: rgba(0, 0, 0, 0.6); /* mantém o estilo transparente */
+  backdrop-filter: blur(4px); /* opcional: mantém efeito moderno */
 }
 
-header .logo h1 { font-size: 2rem; }
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
 
-header nav ul { list-style: none; display: flex; }
-
-header nav ul li { margin-left: 20px; }
-
-header nav ul li a {
-  text-decoration: none;
+header a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  border-radius: 10px;
   color: white;
-  font-size: 1.2rem;
-  transition: color 0.3s;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-header nav ul li a:hover { color: #177b7e; }
+header a:hover {
+  background: #1ca3a8;
+}
 
-/* Seções */
+/* Seções (caixas principais) */
 .atividades {
-  padding: 60px 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  margin: 50px auto;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 1200px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.4s ease;
+  width: 85%;
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 60px 30px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.25);
 }
-
-.atividades:hover { background-color: rgba(255, 255, 255, 1); }
 
 .atividades h2 {
   text-align: center;
   font-size: 2rem;
+  color: white;
   margin-bottom: 40px;
-  color: #333;
 }
 
+/* Container dos cards */
 .atividades-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
 }
 
-/* Atividades individuais */
+/* Card */
 .atividade {
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 280px;
   padding: 20px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  transition: 0.3s;
+  flex: 1 1 260px;
+  max-width: 300px;
 }
 
 .atividade:hover {
-  transform: translateY(-10px);
-  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-8px);
 }
 
+/* Imagens */
 .atividade img {
   width: 100%;
-  height: 150px;
+  height: 160px;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.atividade h3 { font-size: 1.2rem; margin: 5px 0; }
-
+/* Link */
 .atividade a {
-  display: block;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
   color: #177b7e;
-  margin-bottom: 6px;
   text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
 }
 
-.atividade a:hover { text-decoration: underline; }
+.atividade a:hover {
+  text-decoration: underline;
+}
 
-/* Descrição oculta inicialmente */
+/* Descrição */
 .descricao {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.4;
   display: none;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+.video-wrap {
+  width: 100%;       /* sempre tamanho do card */
+  height: 180px;     /* altura fixa para NÃO quebrar o card */
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-/* Botão recolhível */
+/* girar o vídeo 90 graus e garantir que preencha o wrapper */
+.thumb-video {
+  width: 100%;       /* encaixa dentro do card */
+  height: 100%;
+  object-fit: cover; /* evita distorção */
+  display: block;
+}
+
+/* Botão */
 .toggle-btn {
-  background-color: #177b7e;
+  background: #177b7e;
   color: white;
   border: none;
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
-  font-size: 0.9rem;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-.toggle-btn:hover { background-color: #125d5f; }
+.toggle-btn:hover {
+  background: #0f5d60;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .atividades {
+    padding: 40px 20px;
+  }
+  .atividade {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .atividade {
+    width: 100%;
+  }
+
+  .atividades {
+    width: 95%;
+    margin: 40px auto;
+    
+  }
+}
+
+

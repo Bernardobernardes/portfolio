@@ -12,14 +12,14 @@ body {
     position: relative;
 }
 
-/* Imagem de fundo substituindo vídeo */
+
 .image-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../IMG/Fundo1.jpg'); /* Altere o caminho para sua imagem */
+    background-image: url('../IMG/FundoEnsino.avif'); 
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -71,8 +71,8 @@ header nav ul li a:hover {
 .container {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: 50px auto;
+    width: 90%;
+    margin: 100px auto;
     gap: 30px;
 }
 

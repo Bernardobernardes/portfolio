@@ -58,16 +58,18 @@ header nav ul li a:hover {
 /* Seção de atividades */
 .atividades {
   padding: 60px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
   margin: 50px auto;
-  border-radius: 20px;
   width: 90%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.4s ease;
+  background: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-radius: 25px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
 }
 
 .atividades:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .atividades h2 {
